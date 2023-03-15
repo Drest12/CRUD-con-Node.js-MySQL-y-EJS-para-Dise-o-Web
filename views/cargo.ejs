@@ -1,0 +1,38 @@
+<%- include('templates/cabecera.ejs')%>
+<div class="container">
+    <br>
+    <div class="text-primary">
+        <h2>Lista de Cargo</h2>
+    </div>
+    <a href="/cargonew"class="btn btn-primary mt-4"> Nuevo Cargo</a>
+    <table class="table table-hover mt-4" >
+        <thead class=" bg-primary text-white text- text-center">
+            <tr>
+                <th>IdCargo</th>
+                <th>Cargo</th>
+                <th>Sueldo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <% results.forEach((user)=>{%>
+                <tr>
+                    <td>
+                        <%= user.IdCargo %>
+                    </td>
+                    <td>
+                        <%=user.Cargo %>
+                    </td>
+                    <td>
+                        <%=user.Sueldo %>
+                    </td>
+ 
+                    <td>
+                        <a href="/cargoedit/<%= user.IdCargo %>"class="btn btn-success">Editar</a>
+                        <a href="/cargodelete/<%= user.IdCargo %>"class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
+</div>

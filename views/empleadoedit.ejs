@@ -1,0 +1,36 @@
+<%- include("templates/cabecera")%>
+<div class="container mt-4">
+    <div class="card border-danger">
+        <div class="card-header bg-primary text-white"><h3>Modificar Registro Empleado</h3></div>
+            <div class="card-body">
+                <form action="/updateempleado" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="from-label">IdEmpleado:</label>
+                        <input type="text" class="form-control" value="<%=user.IdEmpleado%>"id="id" name="idemp" tabindex="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="from-label">Apellidos:</label>
+                        <input type="text" class="form-control" value="<%=user.Apellidos%>"id="car" name="ape" tabindex="2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Nombres:</label>
+                        <input type="text" class="form-control" value="<%=user.Nombres%>"id="suel" name="nom" tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Direccion:</label>
+                        <input type="text" class="form-control" value="<%=user.Direccion%>"id="suel" name="dir" tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Telefono:</label>
+                        <input type="text" class="form-control" value="<%=user.Telefono%>"id="suel" name="tel" tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo" class="from-label">IdCargo:</label>
+                        <input type="text" class="form-control" value="<%=user.IdCargo%>"id="id" name="idcar" tabindex="1">
+                    </div>
+                    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+                    <a href="/empleado" class="btn btn-warning">Cancelar</a>
+                </form>
+            </div>
+    </div>
+</div>

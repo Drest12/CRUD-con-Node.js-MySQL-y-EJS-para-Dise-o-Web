@@ -1,0 +1,49 @@
+<%- include('templates/cabecera.ejs')%>
+    <div class="container">
+        <br>
+        <div class="text-primary">
+            <h2>Lista de Empleados</h2>
+        </div>
+        <a href="/empleadonew" class="btn btn-primary mt-4"> Nuevo Empleado</a>
+        <table class="table table-hover mt-4 ">
+            <thead class="bg-primary text-white text-center">
+                <tr>
+                    <th>IdEmpleado</th>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>IdCargo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <% results.forEach((user)=>{%>
+                    <tr>
+                        <td>
+                            <%= user.IdEmpleado %>
+                        </td>
+                        <td>
+                            <%=user.Apellidos %>
+                        </td>
+                        <td>
+                            <%=user.Nombres %>
+                        </td>
+                        <td>
+                            <%=user.Direccion %>
+                        </td>
+                        <td>
+                            <%=user.Telefono %>
+                        </td>
+                        <td>
+                            <%=user.IdCargo %>
+                        </td>
+                        <td>
+                            <a href="/empleadoedit/<%= user.IdEmpleado %>" class="btn btn-success">Editar</a>
+                            <a href="/empleadodelete/<%= user.IdEmpleado %>" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+    </div>
