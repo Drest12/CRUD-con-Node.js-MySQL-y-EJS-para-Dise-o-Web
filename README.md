@@ -1,2 +1,2 @@
 # Proyecto_Nodejs_Mysql
-Proyecto NodeJS Mysql de la base de datos empleado
+ode.js con MySQL para gestionar la información de un empleado. El objetivo es desarrollar una aplicación que permita a los usuarios acceder a información relevante del empleado, como su nombre y cargo,.
